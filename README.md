@@ -5,5 +5,8 @@ Project has been updated to use Dart 2.
 
 ## Getting Started
 
+To run: `flutter run --preview-dart-2`
+
+
 For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
