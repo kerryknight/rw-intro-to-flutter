@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'ghflutter.dart';
-import 'member.dart';
 
 void main() => runApp(new GHFlutterApp());
 
