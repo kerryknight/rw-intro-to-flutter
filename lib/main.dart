@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'ghflutter.dart';
 
-void main() => runApp(new GHFlutterApp());
+void main() => runApp(GHFlutterApp());
 
 class GHFlutterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'GHFlutter',
-      theme: new ThemeData(primaryColor: Colors.blue.shade200),
-      home: new GHFlutter()
+      theme: ThemeData(primaryColor: Colors.blue.shade200),
+      home: GHFlutter()
     );
   }
 }

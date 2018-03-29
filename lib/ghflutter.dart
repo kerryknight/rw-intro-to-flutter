@@ -11,16 +11,16 @@ class GHFlutterState extends State<GHFlutter> {
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
   @override
-  
+
   Widget build(BuildContext context) {
-    return new Scaffold (
-      appBar: new AppBar(
-        title: new Text(Strings.appTitle)
+    return Scaffold (
+      appBar: AppBar(
+        title: Text(Strings.appTitle)
       ),
-      body: new ListView.builder(
+      body: ListView.builder(
         itemCount: _members.length * 2,
         itemBuilder: (BuildContext context, int position) {
-          if (position.isOdd) return new Divider();
+          if (position.isOdd) return Divider();
 
           final index = position ~/ 2;
           return _buildRow(index);
@@ -42,23 +42,23 @@ class GHFlutterState extends State<GHFlutter> {
     http.Response response = await http.get(dataURL);
     
     setState(() {
-      final membersJSON = JSON.decode(response.body);
+      final membersJSON = json.decode(response.body);
 
       for (var memberJSON in membersJSON) {
-        final member = new Member(memberJSON["login"], memberJSON["avatar_url"]);
+        final member = Member(memberJSON["login"], memberJSON["avatar_url"]);
         _members.add(member);
       }
     });
   }
 
   Widget _buildRow(int i) {
-    return new Padding(
+    return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: new ListTile(
-        title: new Text("${_members[i].login}", style: _biggerFont),
-        leading: new CircleAvatar(
+      child: ListTile(
+        title: Text("${_members[i].login}", style: _biggerFont),
+        leading: CircleAvatar(
           backgroundColor: Colors.green,
-          backgroundImage: new NetworkImage(_members[i].avatarURL),
+          backgroundImage: NetworkImage(_members[i].avatarURL),
         ),
       )
     );
@@ -67,5 +67,5 @@ class GHFlutterState extends State<GHFlutter> {
 
 class GHFlutter extends StatefulWidget {
   @override
-  createState() => new GHFlutterState();
+  createState() => GHFlutterState();
 }
