@@ -1,5 +1,5 @@
 # rw-intro-to-flutter
-Workthrough of RayWenderlich.com's 'Getting Started with Flutter'
+Workthrough of RayWenderlich.com's [Getting Started with Flutter](https://www.raywenderlich.com/188257/getting-started-with-flutter)
 
 ## Getting Started
 
